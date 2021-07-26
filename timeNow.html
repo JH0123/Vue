@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Now</title>
+    <style>
+        /* body{
+            background-color: black;
+        } */
+        h1{
+            color: rgb(0, 190, 95);
+            font-size: 120px;
+            margin: 50px;
+        }
+        button{
+            /* background-color:rgb(82, 82, 82); */
+            color: rgb(15, 15, 15);
+            border: 0;
+            margin: 50px;
+            border-radius: 10px;
+            font-size: 120px;
+            align-items: center;
+        }
+        button:hover{
+            color: rgb(42, 189, 169);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ now }}</h1>
+        <button @click="time">현재시간</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./timeNow.js"></script>
+</body>
+</html>
