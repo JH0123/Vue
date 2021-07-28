@@ -6,12 +6,6 @@ new Vue({
     totalTime: (1*180),
     resetButton: false,
     totalTime: (1*180)
-    // time:'00:00:00',
-    // timeBegan = null,
-    // stopped = null,
-    // stoppedDuration = 0,
-    // started = null,
-    // running = false
   },
   
   methods: {
@@ -40,53 +34,6 @@ new Vue({
         this.resetTimer;
       }
     }
-
-
-    // start() {
-    //   if (running)
-    //     return;
-    //   if (timeBegan === null) {
-    //     reset();
-    //     timeBegan = new Date();
-    //   }
-    //   if (stopped !== null) {
-    //     stoppedDuration += (new Date() - stopped);
-    //   }
-    //   started = setInterval(clockRunning, 1000); //1초 후에 clockRunning호출
-    //   running = ture;
-    // },
-    // stop() {
-    //   running = false;
-    //   stopped = new Date();
-    //   clearInterval(started);
-    // },
-    // reset() {
-    //   running = false;
-    //   clearInterval(started);
-    //   stoppedDuration = 0;
-    //   timeBegan = null;
-    //   stopped = null,
-    //   clock.time = "00:00:00";
-    // },
-    // clockRunning() {
-    //   let currentTime = new Date(),
-    //     timeElapsed = new Date(currentTime - timeBegan - stoppedDuration),
-    //     hour = timeElapsed.getUTCHours(),
-    //     min = timeElapsed.getUTCMinutes(),
-    //     sec = timeElapsed.getUTCSeconds();
-      
-    //   clock.time =
-    //     zeroPrefix(hour, 2) + ":" +
-    //     zeroPrefix(min, 2) + ":" +
-    //     zeroPrefix(sec, 2);
-    // },
-    // zeroPrefix(num, digit) {
-    //   let zero = '';
-    //   for (let i = 0; i < digit; i++){
-    //     zero += '0';
-    //   }
-    //   return (zero + num).slice(-digit);
-    // }
   },
   
   computed: {
