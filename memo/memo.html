@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo</title>
+</head>
+<body>
+    <h1>Memo</h1>
+    
+    <div id="app">
+        <h1>test</h1>
+        <input v-model="memo" placeholder="메모를 해주세요">
+        <button @click="add">Add</button>
+        <div class="memoList">
+            <ul>
+                <li>
+                    {{ memo }}
+                    <button @click="">Delete</button>
+                    <button @click="">Correction</button>
+                </li>
+            </ul>
+
+        </div>
+       
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./memo.js"></script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+    <div id="app">
+        <div>
+            <span>name : <input type="text" v-model="newMemo"></span>
+
+            <template v-if="state == 'add'">
+                <button @click="addMemo">추가</button>
+            </template>
+
+            <template v-if="state == 'update'">
+                <button @click="updateMemo">적용</button>
+                <button @click="clearEditMode">취소</button>
+            </template>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li v-for="(memo, index) in memoList" :key="index">
+                    {{ memo }}
+                    <button @click="deleteMemo(memo)">삭제</button>
+                    <button @click="setEditMode(index, memo)">수정</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./memo.js"></script>
+</body>
+</html>
