@@ -1,27 +1,3 @@
-// let app = new Vue({
-//     el: '#app',
-//     data: {
-//         memo: '',
-//         memos: [],
-//     },
-//     methods: {
-//         add: function (id) {
-//             if (this.add.length === 0) {
-//                 return;
-//             }
-//             this.memos.push(this.add)
-//         },
-//         delete: function () {
-//             for (var i in this.memos) {
-//                 if (this.memos[i].splice(i, 1));
-//                 break;
-//             }
-//         },
-//     }
-// })
-
-
-
 const EDIT_MODE = {
             UPDATE: "update",
             ADD: "add",
